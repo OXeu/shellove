@@ -22,15 +22,15 @@ curl -s https://raw.githubusercontent.com/ThankRain/shellove/master/install.sh |
 ```shell
 $ mark <name> [path]
 ```
-<name>: 书签名称
-[path]: (可选)书签路径，默认为当前目录
+`<name>`: 书签名称
+`[path]`: (可选)书签路径，默认为当前目录
 
 ### 跳转书签
 支持自动补全
 ```shell
 $ cdm <name>
 ```
-<name>: 书签名称
+`<name>`: 书签名称
 
 ## Git
 ### Gitgraph
@@ -47,7 +47,7 @@ $ gg
 ```shell
 $ addpath [path]
 ```
-[path] 需要添加到 `PATH` 的路径，默认为当前路径
+`[path]` 需要添加到 `PATH` 的路径，默认为当前路径
 
 ## 自定义脚本
 
