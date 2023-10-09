@@ -17,7 +17,7 @@ for script_file in "$script_folder"/*.sh; do
         if [ -f "$script_file" ] && [ -x "$script_file" ]; then
             echo "执行脚本: $script_file"
             # 执行脚本
-            "$script_file"
+            source "$script_file"
         else
             echo "跳过非可执行文件: $script_file"
         fi
