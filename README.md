@@ -6,7 +6,7 @@
 
 2. 执行以下命令
 ```shell
-curl -s https://raw.githubusercontent.com/ThankRain/shellove/master/install.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/ThankRain/shellove/master/install.sh)
 ```
 
 3. 输入您的仓库克隆地址（HTTPS/SSH）
