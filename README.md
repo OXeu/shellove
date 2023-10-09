@@ -1,5 +1,5 @@
-# shellove
-增强体验的 shell 脚本集合
+# Shellove
+增强 Shell 体验的常用脚本集合
 
 # 安装
 1. Fork 本仓库
