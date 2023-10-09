@@ -22,7 +22,7 @@ syncs() {
 
     # 添加所有文件到 git 仓库并提交更改
     git add .
-    git commit -m "同步 .scripts 文件夹"
+    git commit 
 
     # 使用 git pull 来获取远程更改
     git pull origin master
