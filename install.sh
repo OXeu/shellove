@@ -32,4 +32,4 @@ if ! grep -q "~/.scripts/loader.sh" "$HOME/.profile"; then
 else
     echo ".profile 中已经存在 source 命令，跳过添加步骤。"
 fi
-
+source ~/.scripts/loader.sh
