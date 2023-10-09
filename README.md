@@ -20,7 +20,7 @@ curl -s https://raw.githubusercontent.com/ThankRain/shellove/master/install.sh |
 ### 添加书签
 
 ```shell
-mark <name> [path]
+$ mark <name> [path]
 ```
 <name>: 书签名称
 [path]: (可选)书签路径，默认为当前目录
@@ -28,7 +28,7 @@ mark <name> [path]
 ### 跳转书签
 支持自动补全
 ```shell
-cdm <name>
+$ cdm <name>
 ```
 <name>: 书签名称
 
@@ -36,16 +36,16 @@ cdm <name>
 ### Gitgraph
 `git log --all --graph --decorate` 的短命令
 ```shell
-gitgraph
-# 或
-gg
+$ gitgraph
+$ # 或
+$ gg
 ```
 
 ## 其他
 ### 持久化环境变量
 将指定路径添加到环境变量 `PATH` 中，并将其持久化至 `~/.scripts/env.sh` 中
 ```shell
-addpath [path]
+$ addpath [path]
 ```
 [path] 需要添加到 `PATH` 的路径，默认为当前路径
 
