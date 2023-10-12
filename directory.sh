@@ -1,4 +1,4 @@
-#!/bin/zsh -x
+#!/bin/zsh 
 
 autoload -U compinit
 compinit # 初始化补全
@@ -19,20 +19,40 @@ mark() {
     echo "书签 '$name' 已保存: '$path'"
 }
 
+dir_stack=()
+
 # cdm函数：切换至指定名称的目录
 cdm() {
+    dir_stack+=("$(pwd)")
     local name="$1"
     local bookmark_file="$bookmarks_dir/$name"
-
     # 检查书签是否存在
     if [ -f "$bookmark_file" ]; then
-        local path=$(cat $bookmark_file)
-        cd "$path" || return 1 # 切换目录，如果失败则返回1
-        echo "已切换至目录: $path"
+        local p="$(cat $bookmark_file)"
+        cd "$p" # 切换目录，如果失败则返回1
+        echo "已切换至目录: $p"
     else
         echo "书签 '$name' 不存在"
         return 1  # 返回1表示失败
     fi
+}
+
+# 自定义函数 ex，用于退出目录并返回到之前的目录
+ex() {
+  # 如果堆栈为空，输出提示信息
+  if [ ${#dir_stack[@]} -eq 0 ]; then
+    echo "No directory to return to."
+    return 1
+  fi
+
+  # 获取堆栈的顶部元素
+  previous_dir="${dir_stack[@]: -1}"
+  # 使用 cd 命令返回到之前的目录
+  cd "$previous_dir"
+
+  # 从堆栈中移除最顶部的元素
+  dir_stack[-1]=()
+
 }
 
 _cdm() {
