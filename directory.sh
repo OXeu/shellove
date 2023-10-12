@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/zsh -x
 
 autoload -U compinit
 compinit # 初始化补全
@@ -26,8 +26,8 @@ cdm() {
 
     # 检查书签是否存在
     if [ -f "$bookmark_file" ]; then
-        local path=$(cat "$bookmark_file")
-        cd "$path" || return 1  # 切换目录，如果失败则返回1
+        local path=$(cat $bookmark_file)
+        cd "$path" || return 1 # 切换目录，如果失败则返回1
         echo "已切换至目录: $path"
     else
         echo "书签 '$name' 不存在"
