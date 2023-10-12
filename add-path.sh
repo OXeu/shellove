@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 获取脚本所在文件夹的路径
-script_folder="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+script_folder="~/.scripts"
 
 # 定义 env_file 变量以保存 env.sh 文件的路径
 env_file="$script_folder/env.sh"
